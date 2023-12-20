@@ -2,3 +2,4 @@ matplotlib~=3.8.2
 numpy~=1.26.2
 requests~=2.31.0
 Pillow~=10.1.0
+tm1637
