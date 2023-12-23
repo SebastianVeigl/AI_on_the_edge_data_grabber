@@ -3,6 +3,7 @@ import io
 import os.path
 import random
 import re
+import sys
 from dataclasses import dataclass
 from time import sleep
 from typing import List, Optional
@@ -37,7 +38,7 @@ class PictureGrabber:
 
     def start_gathering(self, sleep_time: float, n: Optional[int]):
         while not self.check_finished():
-            sleep(2)
+            sleep(1)
             print('A flow is already running, waiting for it to finish, before continuing...')
 
         if n is None:
@@ -119,13 +120,13 @@ class PictureGrabber:
     def get_image(self) -> np.ndarray:
         while not self.check_finished():
             print('Flow already running, waiting for finish')
-            sleep(2)
+            sleep(1)
 
         requests.get(f'http://{self.esp_ip}/flow_start')
-        sleep(2)
+        sleep(1)
 
         while not self.check_finished():
-            sleep(2)
+            sleep(1)
 
         image_bytes = requests.get(f'http://{self.esp_ip}/img_tmp/alg.jpg').content
 
@@ -136,7 +137,10 @@ class PictureGrabber:
 
 
 if __name__ == '__main__':
-    ip = '192.168.137.62'
-    # ip = '192.168.169.52'
+    if len(sys.argv) < 2:
+        ip = '192.168.137.116'
+    else:
+        ip = sys.argv[1]
+
     picture_grabber = PictureGrabber(ip, 5, 4)
     picture_grabber.start_gathering(1, None)

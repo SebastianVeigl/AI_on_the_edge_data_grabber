@@ -48,6 +48,7 @@ Then the *RST* button has to be pressed.
 There are multiple ways of flashing the firmware described in the [installation documentation](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/), we will be using the provided [Web Installer](https://jomjol.github.io/AI-on-the-edge-device/).
 Enter the installer with your esp32cam connected to the computer using the USB-TTL connector **(make sure to use a 3.3V connector for the ESP32!)**. Select the corresponding COM-Port and start the installation of the current firmware version (this could take a few minutes).  
 After getting the message of successful installation, you have to disconnect the bridge from *IO0* to *GND*.
+
 2. **Setting up the SD-card**  
 Before booting the esp32cam for the first time, we have to set up the SD-card expected by the firmware. First, format the SD-card in FAT32 format (see [Notes on the SD card](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/#manual-setup-with-an-sd-card-reader-on-a-pc)).  
 Download the current SD-card content form the [release page](https://github.com/jomjol/AI-on-the-edge-device/releases). There you have to download the *AI-on-the-edge-device__manual-setup__vXX.X.X.zip* file and copy the contents of the extracted *sd-card* sub-folder to your microSD-card.
@@ -55,9 +56,11 @@ The content should look like this:
 <img src="./files/sd-card-content.png" width=150>  
 With editing the included *wlan.ini* file, we can set up the WI-FI connection. Insert the SSID and password into the file. The hostname and other connection parameters can also be changed inside this file.  
 When everything is set up you can insert the SD-card into the esp32cam.
+
 3. **5V voltage supply**  
 Connect to a 5V supply while unplugging the voltage supply of the USB-TTL connector as shown in the wiring diagram. The remaining connection to the USB-TTL connector is optional and can be used for debugging via a serial monitor.  
 <img src="./files/ESP32CAM_run_Steckplatine.svg" width=750>
+
 4. **Configuration using the Web-UI**  
 Enter the Web-UI using the IP address given to your esp32cam. If everything was successful, you should be welcomed with the configuration page.  
 The first step is to take a reference picture. This will be the basis for the coordinate system of the ROIs (Regions of Interest) later on.  
@@ -69,13 +72,45 @@ The most important part during configuration is to set up the ROIs. These will l
 <img src="./files/ROI_setup.png" width=600>  
 After everything is set up correctly, you have to reboot the esp32cam.  
 For further information on how to configure the AI-on-the-edge-device firmware have a look at the [documentation](https://jomjol.github.io/AI-on-the-edge-device-docs/Reference-Image/).
+
 5. **Selecting the trained neural model**  
 After reboot you might be recognizing (assuming the display is already showing something) that the preconfigured neural network used for the classification of the digits is not working properly with the 7-segment display.  
 Therefore, we will have to change the model by importing the *7seg1912.tflite* model that was already trained on over 1300 digits (see next chapter for instructions) into the file server running on the esp32cam (*System -> File Server -> Upload*).  
-Now it will be an available option under *Settings -> Configuration -> Digit ROI Processing -> Model*.
+Now it will be an available option under *Settings -> Configuration -> Digit ROI Processing -> Model*. After the next reboot the digits will be recognized correctly.
 
 
 ### Auto-training on the 7-segment display using the Raspberry Pi
+
+1. **Training setup**  
+Connect the Raspberry Pi to the TM1637 7-segment display as shown in the following wiring diagram:  
+<img src="./files/RPi_TM1637_Steckplatine.svg" width=600>  
+Make sure that the segment display is aligned with the esp32cam, if necessary adjust the ROI positions in the WebUI.
+
+2. **Software setup on the Raspberry Pi**  
+Connect to the Raspberry Pi using SSH, clone the repository and install the required python packages (using Python 3.9.2):
+```shell
+git clone https://github.com/SebastianVeigl/AI_on_the_edge_segment_train
+cd AI_on_the_edge_segment_train/
+pip3 install -r requirements.txt
+```
+
+3. **Run the script for generating training data**  
+Run the script using the following command including the IP address of the esp32cam (as *$ESP32_IP_ADDRESS*) (make sure that both devices are in the same network).
+```shell
+python picture_grabber.py $ESP32_IP_ADDRESS
+```
+Alternatively you can use:
+```shell
+nohup python picture_grabber.py $ESP32_IP_ADDRESS
+```
+This will prevent the process from stopping when disconnecting the SSH terminal.  
+What the script does is:
+1. Display a random temperature on the segment display  
+2. Starting the flow on the esp32cam, meaning: take a picture, align it, extract the ROIs and try to recognize the digits
+3. When the flow is finished: get the detected value/download the raw aligned image using the built-in REST API
+4. Get the ROI box positions from the *conf.ini* file on the esp32cam file server
+5. Cut out the ROIs from the raw aligned image
+6. Save the cutouts in the corresponding directory under *digits/..*
 
 ## Further Inputs
 - The code used for getting the training data and training th neural net can be found under: <https://github.com/SebastianVeigl/AI_on_the_edge_segment_train>
