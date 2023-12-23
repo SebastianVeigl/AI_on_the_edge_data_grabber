@@ -33,7 +33,7 @@ Fakultät 04
 
 ### For training:
 - Raspberry Pi 
-  - Python 3.9.2 interpreter
+  - Python 3.9.2 interpreter + ability to run jupyter notebooks
 - "Powerful" machine for training of the neural network
 
 ## Solutions Steps
@@ -75,7 +75,7 @@ For further information on how to configure the AI-on-the-edge-device firmware h
 
 5. **Selecting the trained neural model**  
 After reboot you might be recognizing (assuming the display is already showing something) that the preconfigured neural network used for the classification of the digits is not working properly with the 7-segment display.  
-Therefore, we will have to change the model by importing the *7seg1912.tflite* model that was already trained on over 1300 digits (see next chapter for instructions) into the file server running on the esp32cam (*System -> File Server -> Upload*).  
+Therefore, we will have to change the model by importing the *7seg2312.tflite* model that was already trained on ~2500 digits (see next chapter for instructions) into the file server running on the esp32cam (*System -> File Server -> Upload*).  
 Now it will be an available option under *Settings -> Configuration -> Digit ROI Processing -> Model*. After the next reboot the digits will be recognized correctly.
 
 
@@ -111,16 +111,28 @@ What the script does is:
 - Get the ROI box positions from the *conf.ini* file on the esp32cam file server 
 - Cut out the ROIs from the raw aligned image
 - Save the cutouts in the corresponding directory under *digits/...*  
+<img src="./files/0_digit.png"><img src="./files/1_digit.jpeg"><img src="./files/2_digit.jpeg"><img src="./files/3_digit.jpeg"><img src="./files/4_digit.jpeg"><img src="./files/5_digit.jpeg"><img src="./files/6_digit.png"><img src="./files/7_digit.jpeg"><img src="./files/8_digit.jpeg"><img src="./files/9_digit.jpeg">
 
 4. **Downloading the training data**  
 After letting the script run for a few hours, you should have gathered a few hundred pictures. For training the neural net we need a "powerful" computer. 
-So we have to download the pictures taken by the script. For this you can either use th *scp*-command on Linux-machines or *WinSCP* on Windows.  
+So we have to download the pictures inside the *digits* directory taken by the script. For this you can either use th *scp*-command on Linux-machines or *WinSCP* on Windows.  
 
-5. **Preparing the data**  
+5. **Setting up the training environment**  
+For training you need the python (3.10) packages defined in the *training/requirements.txt* file. For installation first clone the repository, then use:  
+```shell
+git clone https://github.com/SebastianVeigl/AI_on_the_edge_segment_train
+cd AI_on_the_edge_segment_train/
+pip install -r training/requirements.txt
+```
 
+6. **Preparing the data**  
+**Note:** The used notebooks were  provided by this [repository](https://github.com/jomjol/neural-network-digital-counter-readout) but slightly improved  
+For preparation of the data (i.e. resizing to 32x20 pixels) you have to execute the *training/Image_Preparation.ipynb* notebook. This should fill the directory *digits_resized* with the resized images.
 
-6. **Training the model**  
-
+7. **Training the model**  
+Use the provided *training/Train_CNN_Digital-Readout.ipynb* notebook for training the network. This will take the saved images as training/validation data for the Convolutional Neural Network (CNN).  
+At the end of the training the best model weights, saved as checkpoint, are loaded and evaluated. At the end, the model gets saved in the lightweight tflite format. You can even use a further compressed/quantized version of the model (*...q.tflite*).  
+After the training is done, the model can be uploaded to the esp32cam and used for the ROI digit recognition.
 
 ## Further Inputs
 - The code used for getting the training data and training th neural net can be found under: <https://github.com/SebastianVeigl/AI_on_the_edge_segment_train>
