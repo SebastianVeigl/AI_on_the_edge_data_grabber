@@ -1,0 +1,305 @@
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4376759 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: Box!WLAN
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<INF>	[WIFI] Connected to: Box!WLAN, RSSI: -59
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.169.52
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4376891 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<INF>	[WIFI] Connected to: LENOVOYOGA 9389, RSSI: -55
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.137.62
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14864MB
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR
+[0d04h11m02s] 1970-01-01T05:11:02	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d04h11m26s] 1970-01-01T05:11:26	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d04h11m50s] 1970-01-01T05:11:50	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d04h12m14s] 1970-01-01T05:12:14	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4377023 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<INF>	[WIFI] Connected to: LENOVOYOGA 9389, RSSI: -59
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.137.189
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14856MB
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h06m15s] 1970-01-01T01:06:15	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h06m39s] 1970-01-01T01:06:39	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h07m03s] 1970-01-01T01:07:04	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h07m28s] 1970-01-01T01:07:28	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4376891 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<INF>	[WIFI] Connected to: LENOVOYOGA 9389, RSSI: -58
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.137.254
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14856MB
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h01m00s] 1970-01-01T01:01:00	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h01m25s] 1970-01-01T01:01:25	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h01m49s] 1970-01-01T01:01:49	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4376891 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:09	<INF>	[WIFI] Connected to: LENOVOYOGA 9389, RSSI: -63
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.137.146
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14856MB
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h03m01s] 1970-01-01T01:03:01	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h03m25s] 1970-01-01T01:03:25	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h03m49s] 1970-01-01T01:03:49	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h04m13s] 1970-01-01T01:04:13	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h04m37s] 1970-01-01T01:04:37	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h05m01s] 1970-01-01T01:05:01	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h05m25s] 1970-01-01T01:05:26	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h05m50s] 1970-01-01T01:05:50	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4377023 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m10s] 1970-01-01T01:00:10	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m12s] 1970-01-01T01:00:12	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m15s] 1970-01-01T01:00:15	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m17s] 1970-01-01T01:00:17	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m20s] 1970-01-01T01:00:20	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m22s] 1970-01-01T01:00:22	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m24s] 1970-01-01T01:00:25	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14856MB
+[0d00h00m27s] 1970-01-01T01:00:27	<WRN>	[WIFI] Disconnected (201, No AP)
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h00m29s] 1970-01-01T01:00:29	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h00m54s] 1970-01-01T01:00:54	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h01m18s] 1970-01-01T01:01:18	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h01m42s] 1970-01-01T01:01:42	<ERR>	[WIFI] Disconnected, multiple reconnect attempts failed (201), still retrying...
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4377023 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<INF>	[WIFI] Connected to: LENOVOYOGA 9389, RSSI: -74
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.137.116
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14856MB
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4376891 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<INF>	[WIFI] Connected to: LENOVOYOGA 9389, RSSI: -51
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.137.116
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14856MB
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] =================================================
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 1970-01-01T00:00:00	<INF>	[MAIN] Total heap: 4376891 byte
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 1970-01-01T00:00:04	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] The local time is unknown, starting with 1970-01-01 01:00:04
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[SNTP] Once the NTP server provides a time, we will switch to that one
+[0d00h00m04s] 1970-01-01T01:00:04	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] Reset reason: Power-on event (or reset button)
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] SSID: LENOVOYOGA 9389
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 1970-01-01T01:00:05	<INF>	[WIFI] Init successful
+[0d00h00m08s] 1970-01-01T01:00:08	<INF>	[WIFI] Connected to: LENOVOYOGA 9389, RSSI: -46
+[0d00h00m09s] 1970-01-01T01:00:09	<INF>	[WIFI] Assigned IP: 192.168.137.116
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 1970-01-01T01:00:25	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14856MB
+[0d00h00m27s] 1970-01-01T01:00:27	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 1970-01-01T01:00:29	<INF>	[LOGFILE] Set log level to ERROR

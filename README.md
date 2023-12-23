@@ -33,7 +33,7 @@ Fakultät 04
 
 ### For training:
 - Raspberry Pi 
-  - Python 3.9 interpreter
+  - Python 3.9.2 interpreter
 - "Powerful" machine for training of the neural network
 
 ## Solutions Steps
@@ -46,7 +46,7 @@ Connect the esp32cam-board with the USB-TTL connector as shown in the wiring dia
 Before flashing the firmware to the esp32cam, we have to bring the module into flash mode. Therefore, pin *IO0* has to be pulled low by connecting the pin with *GND*.
 Then the *RST* button has to be pressed.  
 There are multiple ways of flashing the firmware described in the [installation documentation](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/), we will be using the provided [Web Installer](https://jomjol.github.io/AI-on-the-edge-device/).
-Enter the installer with your esp32cam connected to the computer using the USB-TTL connector **(make sure to use a 3.3V connector for the ESP32!)**. Select the corresponding COM-Port and start the installation of the current firmware version (this could take a few minutes).  
+Enter the installer with your esp32cam connected to the computer using the USB-TTL connector **(make sure to use a 3.3V connector for the ESP32!)**. Select the corresponding COM-Port and start the installation of the current firmware version *v15.3.0* (this could take a few minutes).  
 After getting the message of successful installation, you have to disconnect the bridge from *IO0* to *GND*.
 
 2. **Setting up the SD-card**  
@@ -68,7 +68,7 @@ With this being the first time to see a picture taken by the esp32cam, we can **
 <img src="./files/focus_adjustment.jpg" width=300>  
 With the focus being set, you can proceed with the configuration. After taking the **reference image** and aligning it horizontally, you can define two **alignment references**.
 These will be used to check and adjust the alignment. It is recommended to use unique structures with good contrast.  
-The most important part during configuration is to set up the ROIs. These will later be used for the digit classification. As we are using a 7-segment display, only digit ROIs have to be set up. I was using the display as temperature display, so only ROIs where set up (up to 4 digits would be possible with this display).    
+The most important part during configuration is to set up the ROIs. These will later be used for the digit classification. As we are using a 7-segment display, only digit ROIs have to be set up. I was using the display as temperature display, so only ROIs where set up (up to 4 digits would be possible with this display). Here you can also provide information about the order/multiplier to take into account decimal values.   
 <img src="./files/ROI_setup.png" width=600>  
 After everything is set up correctly, you have to reboot the esp32cam.  
 For further information on how to configure the AI-on-the-edge-device firmware have a look at the [documentation](https://jomjol.github.io/AI-on-the-edge-device-docs/Reference-Image/).
@@ -104,13 +104,23 @@ Alternatively you can use:
 nohup python picture_grabber.py $ESP32_IP_ADDRESS
 ```
 This will prevent the process from stopping when disconnecting the SSH terminal.  
-What the script does is:
-1. Display a random temperature on the segment display  
-2. Starting the flow on the esp32cam, meaning: take a picture, align it, extract the ROIs and try to recognize the digits
-3. When the flow is finished: get the detected value/download the raw aligned image using the built-in REST API
-4. Get the ROI box positions from the *conf.ini* file on the esp32cam file server
-5. Cut out the ROIs from the raw aligned image
-6. Save the cutouts in the corresponding directory under *digits/..*
+What the script does is:  
+- Display a random temperature on the segment display
+- Starting the flow on the esp32cam, meaning: take a picture, align it, extract the ROIs and try to recognize the digits 
+- When the flow is finished: get the detected value/download the raw aligned image using the built-in REST API 
+- Get the ROI box positions from the *conf.ini* file on the esp32cam file server 
+- Cut out the ROIs from the raw aligned image
+- Save the cutouts in the corresponding directory under *digits/...*  
+
+4. **Downloading the training data**  
+After letting the script run for a few hours, you should have gathered a few hundred pictures. For training the neural net we need a "powerful" computer. 
+So we have to download the pictures taken by the script. For this you can either use th *scp*-command on Linux-machines or *WinSCP* on Windows.  
+
+5. **Preparing the data**  
+
+
+6. **Training the model**  
+
 
 ## Further Inputs
 - The code used for getting the training data and training th neural net can be found under: <https://github.com/SebastianVeigl/AI_on_the_edge_segment_train>
@@ -129,6 +139,7 @@ What the script does is:
 ### Set-up
 - For setting up the focus of the camera you can use the included livestream function (<http://$CAM-IP$/stream>)
 - I have disabled the alignment algorithm by setting the *Alignment Algorithm* option in the Configuration to *Off*. This resulted in faster computation (no alignment step) and was sufficiently accurate.
+- For the self-illuminated segment display, the light intensity can be decreased to 10% or lower.
 
 ## Useful Resources for Own Searches
 
@@ -137,9 +148,18 @@ What the script does is:
 AI-on-the-edge docs: 
 <https://jomjol.github.io/AI-on-the-edge-device-docs/>
 
+neural-network-digital-counter-readout:
+<https://github.com/jomjol/neural-network-digital-counter-readout>
+
 Tensorflow Lite guide:
 <https://www.tensorflow.org/lite/guide>
 
+WinSCP download:
+<https://winscp.net/eng/download.php>
+
 raspberrypi-tm1637:
 <https://github.com/depklyon/raspberrypi-tm1637>
+
+Arduino TM1637 library:
+<https://github.com/avishorp/TM1637>
 

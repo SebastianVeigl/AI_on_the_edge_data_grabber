@@ -1,0 +1,193 @@
+[0d00h00m58s] 2023-12-18T19:30:30	<ERR>	[POSTPROC] main: Raw: 4N, Value: , Status: Neg. Rate - Read:  - Raw: 4N - Pre: 64 
+[0d00h05m58s] 2023-12-18T19:35:30	<ERR>	[POSTPROC] main: Raw: 74, Value: , Status: Rate too high - Read: 74 - Pre: 64 - Rate: 10
+[0d00h10m58s] 2023-12-18T19:40:30	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d00h15m58s] 2023-12-18T19:45:31	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d00h20m58s] 2023-12-18T19:50:30	<ERR>	[POSTPROC] main: Raw: 24, Value: , Status: Neg. Rate - Read:  - Raw: 24 - Pre: 64 
+[0d00h25m58s] 2023-12-18T19:55:30	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d00h35m58s] 2023-12-18T20:05:30	<ERR>	[POSTPROC] main: Raw: 14, Value: , Status: Neg. Rate - Read:  - Raw: 14 - Pre: 64 
+[0d00h40m58s] 2023-12-18T20:10:30	<ERR>	[POSTPROC] main: Raw: 24, Value: , Status: Neg. Rate - Read:  - Raw: 24 - Pre: 64 
+[0d00h45m58s] 2023-12-18T20:15:30	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d00h50m58s] 2023-12-18T20:20:30	<ERR>	[POSTPROC] main: Raw: 7N, Value: , Status: Rate too high - Read: 74 - Pre: 64 - Rate: 10
+[0d01h00m58s] 2023-12-18T20:30:30	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d01h10m58s] 2023-12-18T20:40:30	<ERR>	[POSTPROC] main: Raw: 87, Value: , Status: Rate too high - Read: 87 - Pre: 64 - Rate: 23
+[0d01h15m58s] 2023-12-18T20:45:30	<ERR>	[POSTPROC] main: Raw: 44, Value: , Status: Neg. Rate - Read:  - Raw: 44 - Pre: 64 
+[0d01h20m58s] 2023-12-18T20:50:30	<ERR>	[POSTPROC] main: Raw: 4N, Value: , Status: Neg. Rate - Read:  - Raw: 4N - Pre: 64 
+[0d01h25m58s] 2023-12-18T20:55:30	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d01h30m58s] 2023-12-18T21:00:30	<ERR>	[POSTPROC] main: Raw: 44, Value: , Status: Neg. Rate - Read:  - Raw: 44 - Pre: 64 
+[0d01h35m58s] 2023-12-18T21:05:30	<ERR>	[POSTPROC] main: Raw: 7N, Value: , Status: Rate too high - Read: 74 - Pre: 64 - Rate: 10
+[0d01h40m58s] 2023-12-18T21:10:30	<ERR>	[POSTPROC] main: Raw: 14, Value: , Status: Neg. Rate - Read:  - Raw: 14 - Pre: 64 
+[0d01h45m58s] 2023-12-18T21:15:30	<ERR>	[POSTPROC] main: Raw: 87, Value: , Status: Rate too high - Read: 87 - Pre: 64 - Rate: 23
+[0d01h50m58s] 2023-12-18T21:20:30	<ERR>	[POSTPROC] main: Raw: 24, Value: , Status: Neg. Rate - Read:  - Raw: 24 - Pre: 64 
+[0d01h55m58s] 2023-12-18T21:25:30	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d02h00m58s] 2023-12-18T21:30:30	<ERR>	[POSTPROC] main: Raw: 34, Value: , Status: Neg. Rate - Read:  - Raw: 34 - Pre: 64 
+[0d02h05m58s] 2023-12-18T21:35:30	<ERR>	[POSTPROC] main: Raw: 44, Value: , Status: Neg. Rate - Read:  - Raw: 44 - Pre: 64 
+[0d00h00m09s] 2023-12-18T21:42:11	<INF>	[SNTP] =================================================
+[0d00h00m09s] 2023-12-18T21:42:11	<INF>	[SNTP] ==================== Start ======================
+[0d00h00m10s] 2023-12-18T21:42:11	<INF>	[SNTP] == Logs before time sync -> log_1970-01-01.txt ==
+[0d00h00m10s] 2023-12-18T21:42:11	<INF>	[SNTP] Time is synced with NTP Server pool.ntp.org: 2023-12-18 21:42:11
+[0d00h00m11s] 2023-12-18T21:42:13	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m11s] 2023-12-18T21:42:13	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14885MB
+[0d00h00m13s] 2023-12-18T21:42:15	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m15s] 2023-12-18T21:42:17	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h00m45s] 2023-12-18T21:42:47	<ERR>	[POSTPROC] main: Raw: 14, Value: , Status: Neg. Rate - Read:  - Raw: 14 - Pre: 64 
+[0d00h05m45s] 2023-12-18T21:47:46	<ERR>	[POSTPROC] main: Raw: 14, Value: , Status: Neg. Rate - Read:  - Raw: 14 - Pre: 64 
+[0d00h10m44s] 2023-12-18T21:52:46	<ERR>	[POSTPROC] main: Raw: N7, Value: , Status: Rate too high - Read: 67 - Pre: 64 - Rate: 3
+[0d00h00m00s] 2023-12-18T20:54:19	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T20:54:19	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 2023-12-18T20:54:19	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T20:54:19	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 2023-12-18T20:54:19	<INF>	[MAIN] Total heap: 4376759 byte
+[0d00h00m04s] 2023-12-18T20:54:23	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 2023-12-18T20:54:23	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 2023-12-18T20:54:23	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 2023-12-18T20:54:23	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 2023-12-18T20:54:23	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 2023-12-18T21:54:23	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 2023-12-18T21:54:23	<INF>	[SNTP] Time is already set: 2023-12-18 21:54:23
+[0d00h00m04s] 2023-12-18T21:54:23	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[MAIN] Reset reason: Via esp_restart
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[WLANINI] SSID: Box!WLAN
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 2023-12-18T21:54:24	<INF>	[WIFI] Init successful
+[0d00h00m08s] 2023-12-18T21:54:27	<INF>	[WIFI] Connected to: Box!WLAN, RSSI: -69
+[0d00h00m09s] 2023-12-18T21:54:28	<INF>	[WIFI] Assigned IP: 192.168.169.52
+[0d00h00m12s] 2023-12-18T21:54:31	<INF>	[SNTP] Time is synced with NTP Server pool.ntp.org: 2023-12-18 21:54:31
+[0d00h00m13s] 2023-12-18T21:54:32	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m13s] 2023-12-18T21:54:32	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14885MB
+[0d00h00m15s] 2023-12-18T21:54:34	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m17s] 2023-12-18T21:54:36	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h01m28s] 2023-12-18T21:55:47	<ERR>	[POSTPROC] main: Raw: 40, Value: , Status: Rate too high - Read: 40 - Pre: 0 - Rate: 40
+[0d00h00m00s] 2023-12-18T20:57:11	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T20:57:11	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 2023-12-18T20:57:11	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T20:57:11	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 2023-12-18T20:57:11	<INF>	[MAIN] Total heap: 4376759 byte
+[0d00h00m04s] 2023-12-18T20:57:15	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 2023-12-18T20:57:15	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 2023-12-18T20:57:15	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 2023-12-18T20:57:15	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 2023-12-18T20:57:15	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 2023-12-18T21:57:15	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 2023-12-18T21:57:15	<INF>	[SNTP] Time is already set: 2023-12-18 21:57:15
+[0d00h00m04s] 2023-12-18T21:57:15	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[MAIN] Reset reason: Via esp_restart
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[WLANINI] SSID: Box!WLAN
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 2023-12-18T21:57:16	<INF>	[WIFI] Init successful
+[0d00h00m08s] 2023-12-18T21:57:19	<INF>	[WIFI] Connected to: Box!WLAN, RSSI: -69
+[0d00h00m09s] 2023-12-18T21:57:20	<INF>	[WIFI] Assigned IP: 192.168.169.52
+[0d00h00m10s] 2023-12-18T21:57:21	<INF>	[SNTP] Time is synced with NTP Server pool.ntp.org: 2023-12-18 21:57:21
+[0d00h00m11s] 2023-12-18T21:57:22	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m11s] 2023-12-18T21:57:22	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14885MB
+[0d00h00m13s] 2023-12-18T21:57:24	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m15s] 2023-12-18T21:57:26	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h11m20s] 2023-12-18T22:08:31	<ERR>	[POSTPROC] main: Raw: 55, Value: , Status: Neg. Rate - Read:  - Raw: 55 - Pre: 95 
+[0d00h15m22s] 2023-12-18T22:12:33	<ERR>	[POSTPROC] main: Raw: 86, Value: , Status: Neg. Rate - Read:  - Raw: 86 - Pre: 95 
+[0d00h00m00s] 2023-12-18T21:17:14	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T21:17:14	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 2023-12-18T21:17:14	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T21:17:14	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 2023-12-18T21:17:14	<INF>	[MAIN] Total heap: 4376891 byte
+[0d00h00m04s] 2023-12-18T21:17:18	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 2023-12-18T21:17:18	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 2023-12-18T21:17:18	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 2023-12-18T21:17:18	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 2023-12-18T21:17:18	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 2023-12-18T22:17:18	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 2023-12-18T22:17:18	<INF>	[SNTP] Time is already set: 2023-12-18 22:17:18
+[0d00h00m04s] 2023-12-18T22:17:18	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[MAIN] Reset reason: Via esp_restart
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[WLANINI] SSID: Box!WLAN
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 2023-12-18T22:17:19	<INF>	[WIFI] Init successful
+[0d00h00m08s] 2023-12-18T22:17:23	<INF>	[WIFI] Connected to: Box!WLAN, RSSI: -69
+[0d00h00m09s] 2023-12-18T22:17:24	<INF>	[WIFI] Assigned IP: 192.168.169.52
+[0d00h00m25s] 2023-12-18T22:17:39	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m25s] 2023-12-18T22:17:39	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14885MB
+[0d00h00m27s] 2023-12-18T22:17:41	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m29s] 2023-12-18T22:17:44	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h00m00s] 2023-12-18T21:21:38	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T21:21:38	<INF>	[MAIN] ==================== Start ======================
+[0d00h00m00s] 2023-12-18T21:21:38	<INF>	[MAIN] =================================================
+[0d00h00m00s] 2023-12-18T21:21:38	<INF>	[MAIN] PSRAM size: 8388608 byte (8MB / 64MBit)
+[0d00h00m00s] 2023-12-18T21:21:38	<INF>	[MAIN] Total heap: 4376891 byte
+[0d00h00m04s] 2023-12-18T21:21:42	<INF>	[MAIN] Camera info: PID: 0x26, VER: 0x42, MIDL: 0x7f, MIDH: 0xa2
+[0d00h00m04s] 2023-12-18T21:21:42	<INF>	[SDCARD] Basic R/W check started...
+[0d00h00m04s] 2023-12-18T21:21:42	<INF>	[SDCARD] Basic R/W check successful
+[0d00h00m04s] 2023-12-18T21:21:42	<INF>	[SNTP] TimeServer not defined, using default: pool.ntp.org
+[0d00h00m04s] 2023-12-18T21:21:42	<INF>	[SNTP] Configuring NTP Client...
+[0d00h00m04s] 2023-12-18T22:21:42	<INF>	[SNTP] Time zone set to CET-1CEST,M3.5.0,M10.5.0/3
+[0d00h00m04s] 2023-12-18T22:21:42	<INF>	[SNTP] Time is already set: 2023-12-18 22:21:42
+[0d00h00m04s] 2023-12-18T22:21:42	<INF>	[MAIN] CPU frequency: 160 MHz
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[SDCARD] Folder/file presence check started...
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[SDCARD] Folder/file presence check successful
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[MAIN] Tag: 'v15.3.0', Release: v15.3.0 (Commit: 3fbff0a), Date/Time: 2023-07-22 09:42, Web UI: Release: v15.3.0 (Commit: 3fbff0a)
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[MAIN] Reset reason: Via esp_restart
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[WLANINI] SSID: Box!WLAN
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[WLANINI] Password: XXXXXXXX
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[WLANINI] RSSIThreshold: -75
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[MAIN] WLAN config loaded, init WIFI...
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[WIFI] Automatic interface config --> Use DHCP service
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[WIFI] Set hostname to: watermeter
+[0d00h00m05s] 2023-12-18T22:21:43	<INF>	[WIFI] Init successful
+[0d00h00m08s] 2023-12-18T22:21:46	<INF>	[WIFI] Connected to: Box!WLAN, RSSI: -69
+[0d00h00m09s] 2023-12-18T22:21:47	<INF>	[WIFI] Assigned IP: 192.168.169.52
+[0d00h00m10s] 2023-12-18T22:21:48	<INF>	[SNTP] Time is synced with NTP Server pool.ntp.org: 2023-12-18 22:21:48
+[0d00h00m11s] 2023-12-18T22:21:49	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
+[0d00h00m11s] 2023-12-18T22:21:49	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14885MB
+[0d00h00m13s] 2023-12-18T22:21:51	<INF>	[MAIN] Initialization completed successfully
+[0d00h00m15s] 2023-12-18T22:21:53	<INF>	[LOGFILE] Set log level to ERROR
+[0d00h08m39s] 2023-12-18T22:30:17	<ERR>	[POSTPROC] main: Raw: 39, Value: , Status: Neg. Rate - Read:  - Raw: 39 - Pre: 80 
+[0d00h11m59s] 2023-12-18T22:33:37	<ERR>	[POSTPROC] main: Raw: 50, Value: , Status: Neg. Rate - Read:  - Raw: 50 - Pre: 80 
+[0d00h17m03s] 2023-12-18T22:38:41	<ERR>	[POSTPROC] main: Raw: 29, Value: , Status: Neg. Rate - Read:  - Raw: 29 - Pre: 80 
+[0d00h19m25s] 2023-12-18T22:41:03	<ERR>	[POSTPROC] main: Raw: 59, Value: , Status: Neg. Rate - Read:  - Raw: 59 - Pre: 85 
+[0d00h25m07s] 2023-12-18T22:46:45	<ERR>	[POSTPROC] main: Raw: 20, Value: , Status: Neg. Rate - Read:  - Raw: 20 - Pre: 90 
+[0d00h28m36s] 2023-12-18T22:50:14	<ERR>	[POSTPROC] main: Raw: 59, Value: , Status: Neg. Rate - Read:  - Raw: 59 - Pre: 90 
+[0d00h29m45s] 2023-12-18T22:51:23	<ERR>	[POSTPROC] main: Raw: 74, Value: , Status: Neg. Rate - Read:  - Raw: 74 - Pre: 90 
+[0d00h33m13s] 2023-12-18T22:54:51	<ERR>	[POSTPROC] main: Raw: 40, Value: , Status: Neg. Rate - Read:  - Raw: 40 - Pre: 90 
+[0d00h34m22s] 2023-12-18T22:56:00	<ERR>	[POSTPROC] main: Raw: 70, Value: , Status: Neg. Rate - Read:  - Raw: 70 - Pre: 90 
+[0d00h36m39s] 2023-12-18T22:58:17	<ERR>	[POSTPROC] main: Raw: 84, Value: , Status: Neg. Rate - Read:  - Raw: 84 - Pre: 95 
+[0d00h41m14s] 2023-12-18T23:02:52	<ERR>	[POSTPROC] main: Raw: 65, Value: , Status: Neg. Rate - Read:  - Raw: 65 - Pre: 99 
+[0d00h42m22s] 2023-12-18T23:04:00	<ERR>	[POSTPROC] main: Raw: 49, Value: , Status: Neg. Rate - Read:  - Raw: 49 - Pre: 99 
+[0d00h43m34s] 2023-12-18T23:05:12	<ERR>	[POSTPROC] main: Raw: 44, Value: , Status: Neg. Rate - Read:  - Raw: 44 - Pre: 99 
+[0d00h48m22s] 2023-12-18T23:10:00	<ERR>	[POSTPROC] main: Raw: 52, Value: , Status: Neg. Rate - Read:  - Raw: 52 - Pre: 99 
+[0d00h53m13s] 2023-12-18T23:14:51	<ERR>	[POSTPROC] main: Raw: 92, Value: , Status: Neg. Rate - Read:  - Raw: 92 - Pre: 99 
+[0d00h56m36s] 2023-12-18T23:18:14	<ERR>	[POSTPROC] main: Raw: 33, Value: , Status: Neg. Rate - Read:  - Raw: 33 - Pre: 99 
+[0d00h57m52s] 2023-12-18T23:19:30	<ERR>	[POSTPROC] main: Raw: 60, Value: , Status: Neg. Rate - Read:  - Raw: 60 - Pre: 99 
+[0d01h01m34s] 2023-12-18T23:23:12	<ERR>	[POSTPROC] main: Raw: 55, Value: , Status: Neg. Rate - Read:  - Raw: 55 - Pre: 99 
+[0d01h04m02s] 2023-12-18T23:25:40	<ERR>	[POSTPROC] main: Raw: 60, Value: , Status: Neg. Rate - Read:  - Raw: 60 - Pre: 99 
+[0d01h06m26s] 2023-12-18T23:28:04	<ERR>	[POSTPROC] main: Raw: 44, Value: , Status: Neg. Rate - Read:  - Raw: 44 - Pre: 99 
+[0d01h08m49s] 2023-12-18T23:30:27	<ERR>	[POSTPROC] main: Raw: 84, Value: , Status: Neg. Rate - Read:  - Raw: 84 - Pre: 99 
+[0d01h09m55s] 2023-12-18T23:31:32	<ERR>	[POSTPROC] main: Raw: 84, Value: , Status: Neg. Rate - Read:  - Raw: 84 - Pre: 99 
+[0d01h11m10s] 2023-12-18T23:32:48	<ERR>	[POSTPROC] main: Raw: 57, Value: , Status: Neg. Rate - Read:  - Raw: 57 - Pre: 99 
+[0d01h12m25s] 2023-12-18T23:34:03	<ERR>	[POSTPROC] main: Raw: 55, Value: , Status: Neg. Rate - Read:  - Raw: 55 - Pre: 99 
+[0d01h13m40s] 2023-12-18T23:35:18	<ERR>	[POSTPROC] main: Raw: 84, Value: , Status: Neg. Rate - Read:  - Raw: 84 - Pre: 99 
+[0d01h14m55s] 2023-12-18T23:36:32	<ERR>	[POSTPROC] main: Raw: 89, Value: , Status: Neg. Rate - Read:  - Raw: 89 - Pre: 99 
+[0d01h18m33s] 2023-12-18T23:40:11	<ERR>	[POSTPROC] main: Raw: 58, Value: , Status: Neg. Rate - Read:  - Raw: 58 - Pre: 99 
+[0d01h19m51s] 2023-12-18T23:41:29	<ERR>	[POSTPROC] main: Raw: 89, Value: , Status: Neg. Rate - Read:  - Raw: 89 - Pre: 99 
+[0d01h21m08s] 2023-12-18T23:42:46	<ERR>	[POSTPROC] main: Raw: 84, Value: , Status: Neg. Rate - Read:  - Raw: 84 - Pre: 99 
+[0d01h22m21s] 2023-12-18T23:43:59	<ERR>	[POSTPROC] main: Raw: 59, Value: , Status: Neg. Rate - Read:  - Raw: 59 - Pre: 99 
+[0d01h23m34s] 2023-12-18T23:45:12	<ERR>	[POSTPROC] main: Raw: 84, Value: , Status: Neg. Rate - Read:  - Raw: 84 - Pre: 99 
+[0d01h31m45s] 2023-12-18T23:53:22	<ERR>	[POSTPROC] main: Raw: 59, Value: , Status: Neg. Rate - Read:  - Raw: 59 - Pre: 99 
+[0d01h32m59s] 2023-12-18T23:54:37	<ERR>	[POSTPROC] main: Raw: 55, Value: , Status: Neg. Rate - Read:  - Raw: 55 - Pre: 99 
