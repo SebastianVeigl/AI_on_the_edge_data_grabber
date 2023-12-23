@@ -136,6 +136,7 @@ class PictureGrabber:
 
 
 if __name__ == '__main__':
-    ip = '192.168.169.52'
+    ip = '192.168.137.62'
+    # ip = '192.168.169.52'
     picture_grabber = PictureGrabber(ip, 5, 4)
     picture_grabber.start_gathering(1, None)
