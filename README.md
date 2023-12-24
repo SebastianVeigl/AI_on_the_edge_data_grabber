@@ -136,7 +136,7 @@ After the training is done, the model can be uploaded to the esp32cam and used f
 
 ## Further Inputs
 - The code used for getting the training data and training th neural net can be found under: <https://github.com/SebastianVeigl/AI_on_the_edge_segment_train>
-- The SD-card content (incl. setting, etc.) used for my implementation can be found in the repository 
+- The SD-card content (incl. settings, etc.) used for my implementation can be found in the repository 
 
 ## Hints and pitfalls
 
@@ -151,7 +151,7 @@ After the training is done, the model can be uploaded to the esp32cam and used f
 ### Set-up
 - For setting up the focus of the camera you can use the included livestream function (<http://$CAM-IP$/stream>)
 - I have disabled the alignment algorithm by setting the *Alignment Algorithm* option in the Configuration to *Off*. This resulted in faster computation (no alignment step) and was sufficiently accurate.
-- For the self-illuminated segment display, the light intensity can be decreased to 10% or lower.
+- For the self-illuminated segment display, the flashlight intensity can be decreased to 10% or lower.
 
 ## Useful Resources for Own Searches
 

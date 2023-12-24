@@ -68,7 +68,7 @@ class PictureGrabber:
         for roi in self.roi_bounds:
             digit_value = digits[roi.dig_num - 1]
 
-            image_cutout = image[roi.y:roi.y + roi.height, roi.x:roi.x + roi.width]  # TODO check if boxes are right
+            image_cutout = image[roi.y:roi.y + roi.height, roi.x:roi.x + roi.width]
 
             plt.imsave(f'digits/{digit_value}/{digit_value}_{datetime.datetime.now().strftime("%d_%m_%Y_%H_%M_%S")}.jpeg', image_cutout)
 
@@ -143,4 +143,4 @@ if __name__ == '__main__':
         ip = sys.argv[1]
 
     picture_grabber = PictureGrabber(ip, 5, 4)
-    picture_grabber.start_gathering(1, None)
+    picture_grabber.start_gathering(0, None)
