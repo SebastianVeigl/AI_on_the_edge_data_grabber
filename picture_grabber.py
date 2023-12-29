@@ -60,17 +60,21 @@ class PictureGrabber:
         image = self.get_image()
         # self.show_boxes(image)
 
-        sleep(5)
+        sleep(3)
         detected_number = requests.get(f'http://{self.esp_ip}/json').json()
-        detected_number = detected_number['main']['raw']
+        detected_number = detected_number['main']['value']
         print(f'Detected: {detected_number}')
+        if int(detected_number) != int(number):
+            print(f'Uncorrect detection {number} vs. {detected_number}')
 
         for roi in self.roi_bounds:
             digit_value = digits[roi.dig_num - 1]
 
             image_cutout = image[roi.y:roi.y + roi.height, roi.x:roi.x + roi.width]
 
-            plt.imsave(f'digits/{digit_value}/{digit_value}_{datetime.datetime.now().strftime("%d_%m_%Y_%H_%M_%S")}.jpeg', image_cutout)
+            plt.imsave(
+                f'digits/{digit_value}/{digit_value}_{datetime.datetime.now().strftime("%d_%m_%Y_%H_%M_%S")}.jpeg',
+                image_cutout)
 
     def show_boxes(self, image: np.ndarray):
         # Create figure and axes
@@ -112,9 +116,11 @@ class PictureGrabber:
 
         return rois
 
-    def check_finished(self) -> bool:
+    def check_finished(self, status_set: Optional[set] = None) -> bool:
         req = requests.get(f'http://{self.esp_ip}/statusflow')
         resp = str(req.content, req.encoding)
+        if status_set is not None:
+            status_set.add(resp)
         return 'FINISHED' in resp.upper()
 
     def get_image(self) -> np.ndarray:
@@ -125,8 +131,12 @@ class PictureGrabber:
         requests.get(f'http://{self.esp_ip}/flow_start')
         sleep(1)
 
-        while not self.check_finished():
-            sleep(1)
+        status_set = set()
+
+        while not self.check_finished(status_set):
+            sleep(0.1)
+
+        print(status_set)
 
         image_bytes = requests.get(f'http://{self.esp_ip}/img_tmp/alg.jpg').content
 
@@ -138,7 +148,7 @@ class PictureGrabber:
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        ip = '192.168.137.116'
+        ip = '192.168.137.110'
     else:
         ip = sys.argv[1]
 
