@@ -12,12 +12,13 @@ interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
-image_in = Image.open('../training/digits_resized/7_19_12_2023_18_41_26.jpg')
-test_image = np.array(image_in, dtype="float32")
-img = np.reshape(test_image, [1, 32, 20, 3])
-
 # Test the model on random input data.
 input_shape = input_details[0]['shape']
+
+image_in = Image.open('../training/digits_resized/8_19_12_2023_18_48_08.jpg')
+test_image = np.array(image_in, dtype="float32")
+img = np.reshape(test_image, input_shape)
+
 interpreter.set_tensor(input_details[0]['index'], img)
 
 interpreter.invoke()
