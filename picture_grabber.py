@@ -148,7 +148,7 @@ class PictureGrabber:
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
-        ip = '192.168.137.110'
+        ip = '192.168.137.147'
     else:
         ip = sys.argv[1]
 

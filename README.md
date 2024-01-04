@@ -82,7 +82,7 @@ Now it will be an available option under *Settings -> Configuration -> Digit ROI
 ### Auto-training on the 7-segment display using the Raspberry Pi
 
 1. **Training setup**  
-Connect the Raspberry Pi to the TM1637 7-segment display as shown in the following wiring diagram:  
+Connect the Raspberry Pi to the TM1637 7-segment display as shown in the following wiring diagram (connect voltage supply and SCL->GPIO5, DIO->GPIO4):  
 <img src="./files/RPi_TM1637_Steckplatine.svg" width=600>  
 Make sure that the segment display is aligned with the esp32cam, if necessary adjust the ROI positions in the WebUI.
 
@@ -124,6 +124,10 @@ git clone https://github.com/SebastianVeigl/AI_on_the_edge_segment_train
 cd AI_on_the_edge_segment_train/
 pip install -r training/requirements.txt
 ```
+After installing all necessary packages you can run JupyterLab using the following command:
+```shell
+jupyter-lab training
+```
 
 6. **Preparing the data**  
 **Note:** The used notebooks were  provided by this [repository](https://github.com/jomjol/neural-network-digital-counter-readout) but slightly improved  
@@ -151,7 +155,7 @@ After the training is done, the model can be uploaded to the esp32cam and used f
 ### Set-up
 - For setting up the focus of the camera you can use the included livestream function (<http://$CAM-IP$/stream>)
 - I have disabled the alignment algorithm by setting the *Alignment Algorithm* option in the Configuration to *Off*. This resulted in faster computation (no alignment step) and was sufficiently accurate.
-- For the self-illuminated segment display, the flashlight intensity can be decreased to 10% or lower.
+- For the self-illuminated segment display, the flashlight intensity can be decreased to 10% or lower, this will decrease reflections.
 
 ## Useful Resources for Own Searches
 
