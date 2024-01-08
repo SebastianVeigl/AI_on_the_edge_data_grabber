@@ -147,7 +147,7 @@ After the training is done, the model can be uploaded to the esp32cam and used f
 #### Results
 The pictures below show the comparison od size, accuracy and runtime of the model coming with *AI-on-the-edge-device* (baseline), the trained model in keras format, tflite format and a quantized version.
 
-<img src="./files/Results.png" width=600>  
+<img src="./files/Results.jpg" width=600>  
 
 Here you can see the confusion matrix of the baseline model (not trained on the 7-segment pictures) and the trained model:
 
