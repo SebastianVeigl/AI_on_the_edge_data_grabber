@@ -22,6 +22,8 @@ Fakultät 04
 ## Prerequisites and required equipment
 
 ### For AI on the edge device using the 7-segment display:
+<img src="./files/esp32cam.png" width=200>  
+
 - esp32cam
   - min. 4 MB of PSRAM (see [Hardware Compatibility](https://jomjol.github.io/AI-on-the-edge-device-docs/Hardware-Compatibility/) for known-working models)
   - OV2640 camera module
@@ -29,7 +31,7 @@ Fakultät 04
 - 5V voltage supply ([USB-breakout board](https://www.reichelt.de/entwicklerboards-breakout-board-mit-microusb-debo-microusb-p235502.html?PROVID=2788&gclid=CjwKCAiAp5qsBhAPEiwAP0qeJlUKYR2Ky4i1cNpVwsTMjPRNG9YKlgDQA9UiotmsCMJM1c-haZ3J7hoC8_EQAvD_BwE))
 - 3.3V USB-TTL connector (e.g. https://www.amazon.de/DSD-TECH-Seriell-Adapter-Kompatibel/dp/B07BBPX8B8)
 - TM1637 7-segment display
-- (3D-printed) Holder for keeping the esp32cam in place over the display
+- (3D-printed) Holder for keeping the esp32cam in place in front of the display
 
 ### For training:
 - Raspberry Pi 
@@ -83,6 +85,7 @@ Now it will be an available option under *Settings -> Configuration -> Digit ROI
 
 1. **Training setup**  
 Connect the Raspberry Pi to the TM1637 7-segment display as shown in the following wiring diagram (connect voltage supply and SCL->GPIO5, DIO->GPIO4):  
+<img src="./files/Training_setup.png" width=600>
 <img src="./files/RPi_TM1637_Steckplatine.svg" width=600>  
 Make sure that the segment display is aligned with the esp32cam, if necessary adjust the ROI positions in the WebUI.
 
@@ -103,6 +106,8 @@ Alternatively you can use:
 ```shell
 nohup python picture_grabber.py $ESP32_IP_ADDRESS
 ```
+<img src="./files/Flow.png" width=750>  
+
 This will prevent the process from stopping when disconnecting the SSH terminal.  
 What the script does is:  
 - Display a random temperature on the segment display
@@ -133,10 +138,62 @@ jupyter-lab training
 **Note:** The used notebooks were  provided by this [repository](https://github.com/jomjol/neural-network-digital-counter-readout) but slightly improved  
 For preparation of the data (i.e. resizing to 32x20 pixels) you have to execute the *training/Image_Preparation.ipynb* notebook. This should fill the directory *digits_resized* with the resized images.
 
-7. **Training the model**  
-Use the provided *training/Train_CNN_Digital-Readout.ipynb* notebook for training the network. This will take the saved images as training/validation data for the Convolutional Neural Network (CNN).  
-At the end of the training the best model weights, saved as checkpoint, are loaded and evaluated. At the end, the model gets saved in the lightweight tflite format. You can even use a further compressed/quantized version of the model (*...q.tflite*).  
+7. **Training the model**
+<img src="./files/Model_structure.png" width=750>
+Use the provided *training/Train_CNN_Digital-Readout.ipynb* notebook for training the network. This will take the saved images as training/validation data for the Convolutional Neural Network (CNN). Set the value of *tflite_model_name_version* in order to change the name of the resulting files.   
+At the end of the training the best model weights, saved as checkpoint, are loaded and evaluated. Afterward, the model gets saved in the lightweight tflite format. You can even use a further compressed/quantized version of the model (*...q.tflite*).  
 After the training is done, the model can be uploaded to the esp32cam and used for the ROI digit recognition.
+
+#### Results
+The pictures below show the comparison od size, accuracy and runtime of the model coming with *AI-on-the-edge-device* (baseline), the trained model in keras format, tflite format and a quantized version.
+
+<img src="./files/Results.png" width=600>  
+
+Here you can see the confusion matrix of the baseline model (not trained on the 7-segment pictures) and the trained model:
+
+<img src="./files/confusion_matrix.png">
+
+### Inference on other devices (e.g. Raspberry Pi)  
+1. **Installing the Required package**  
+For using the trained tflite model on a Raspberry Pi, you are required to install the *tflite-runtime* package using:   
+```bash
+pip3 install tflite-runtime
+```  
+2. **Running inference**  
+The code below can be used to classify a picture of a digit cutout using the before trained tflite model on the Raspberry Pi.  
+```python
+import tflite_runtime.interpreter as tflite
+import numpy as np
+from PIL import Image
+
+TFLITE_FILE_PATH = '../models/7seg2912.tflite'
+
+# Load the TFLite model in TFLite Interpreter
+interpreter = tflite.Interpreter(TFLITE_FILE_PATH)
+interpreter.allocate_tensors()
+
+# Get input and output tensors.
+input_details = interpreter.get_input_details()
+output_details = interpreter.get_output_details()
+
+# Test the model on random input data.
+input_shape = input_details[0]['shape']
+
+image_in = Image.open('../training/digits_resized/8_19_12_2023_18_48_08.jpg')
+test_image = np.array(image_in, dtype="float32")
+img = np.reshape(test_image, input_shape)
+
+interpreter.set_tensor(input_details[0]['index'], img)
+
+interpreter.invoke()
+
+# The function `get_tensor()` returns a copy of the tensor data.
+# Use `tensor()` in order to get a pointer to the tensor.
+output_data = interpreter.get_tensor(output_details[0]['index'])
+print(output_data)
+print(output_data.argmax())
+```
+This code can be found in the [repository](https://github.com/SebastianVeigl/AI_on_the_edge_segment_train) (*inference/tflite_inference_RPi.py*) where you can also find some example pictures.
 
 ## Further Inputs
 - The code used for getting the training data and training th neural net can be found under: <https://github.com/SebastianVeigl/AI_on_the_edge_segment_train>
@@ -156,6 +213,17 @@ After the training is done, the model can be uploaded to the esp32cam and used f
 - For setting up the focus of the camera you can use the included livestream function (<http://$CAM-IP$/stream>)
 - I have disabled the alignment algorithm by setting the *Alignment Algorithm* option in the Configuration to *Off*. This resulted in faster computation (no alignment step) and was sufficiently accurate.
 - For the self-illuminated segment display, the flashlight intensity can be decreased to 10% or lower, this will decrease reflections.
+
+### Training
+- During training augmentation (changing rotation, zoom, brightness, ...) of the raw pictures is used to prevent overfitting and improve generalization. An example of resulting pictures can be seen in the picture below: 
+<img src="./files/augmentation.png" width=300>  
+- I encountered problems classifying pictures taken at bright environments (e.g. direct sun). Then the pictures contain lines due to the short exposure time and refresh of the display. This leads to unambiguous pictures that are hard to classify. 
+<img src="./files/Display_refresh.gif" width=300>  
+<img src="./files/High_brightness_results.png" width=500>  
+This problem could be fixed with a more encapsulated holder.
+
+### Inference  
+- For inference on the PC you can also replace the *tflite_runtime* package with the *tensorflow.lite* subpackage.
 
 ## Useful Resources for Own Searches
 
