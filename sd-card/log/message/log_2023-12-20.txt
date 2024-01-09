@@ -1,8 +1,0 @@
-[0d00h00m11s] 2023-12-20T09:59:58	<INF>	[SNTP] =================================================
-[0d00h00m11s] 2023-12-20T09:59:58	<INF>	[SNTP] ==================== Start ======================
-[0d00h00m11s] 2023-12-20T09:59:58	<INF>	[SNTP] == Logs before time sync -> log_1970-01-01.txt ==
-[0d00h00m11s] 2023-12-20T09:59:58	<INF>	[SNTP] Time is synced with NTP Server pool.ntp.org: 2023-12-20 09:59:58
-[0d00h00m13s] 2023-12-20T10:00:00	<INF>	[MAIN] Device info: CPU cores: 2, Chip revision: 300
-[0d00h00m13s] 2023-12-20T10:00:00	<INF>	[MAIN] SD card info: Name: SD, Capacity: 14910MB, Free: 14866MB
-[0d00h00m15s] 2023-12-20T10:00:02	<INF>	[MAIN] Initialization completed successfully
-[0d00h00m17s] 2023-12-20T10:00:04	<INF>	[LOGFILE] Set log level to ERROR

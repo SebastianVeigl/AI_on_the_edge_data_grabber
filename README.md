@@ -1,8 +1,6 @@
 <!--- CPS
-Author: <NAME>  Date: <JJJJ MMM DD> 
+Author: <Sebastian Veigl>  Date: <2024 JAN 10> 
 Changes by:
-<NAME> - <JJJJ MMM DD> - <comment> 
-
 --->
 **Cyber Physical Systems**   <img style="float:right" src="./files/HM_SchriftzugLogo_RGB.png" width="200">  
 Fakultät 04 
@@ -15,79 +13,80 @@ Fakultät 04
 
 ## Objectives
 
-- Use an esp32cam as AI on the edge device detecting digits on an 7-segment display
+- Use an ESP32-Cam as AI on the edge device detecting digits on an 7-segment display
 - Utilizing the [AI-on-the-edge-device](https://github.com/jomjol/AI-on-the-edge-device) github-repository by [jomjol](https://github.com/jomjol)
-- Training the used neural net for the special use case of the 7-segment display
+- Training the used neural net for the special use case of reading a 7-segment display
 
 ## Prerequisites and required equipment
 
 ### For AI on the edge device using the 7-segment display:
 <img src="./files/esp32cam.png" width=200>  
 
-- esp32cam
+- ESP32-Cam
   - min. 4 MB of PSRAM (see [Hardware Compatibility](https://jomjol.github.io/AI-on-the-edge-device-docs/Hardware-Compatibility/) for known-working models)
   - OV2640 camera module
 - micro SD-Card (preferable max. 16-32 GB)
 - 5V voltage supply ([USB-breakout board](https://www.reichelt.de/entwicklerboards-breakout-board-mit-microusb-debo-microusb-p235502.html?PROVID=2788&gclid=CjwKCAiAp5qsBhAPEiwAP0qeJlUKYR2Ky4i1cNpVwsTMjPRNG9YKlgDQA9UiotmsCMJM1c-haZ3J7hoC8_EQAvD_BwE))
 - 3.3V USB-TTL connector (e.g. https://www.amazon.de/DSD-TECH-Seriell-Adapter-Kompatibel/dp/B07BBPX8B8)
 - TM1637 7-segment display
-- (3D-printed) Holder for keeping the esp32cam in place in front of the display
+- (3D-printed) Holder for keeping the ESP32-Cam in place in front of the display
 
 ### For training:
 - Raspberry Pi 
-  - Python 3.9.2 interpreter + ability to run jupyter notebooks
+  - Python 3.9.2 
 - "Powerful" machine for training of the neural network
+  - Python 3.10
 
 ## Solutions Steps
 
-### Installation and setup of AI-on-the-edge-device on the esp32cam
+### Installation and setup of AI-on-the-edge-device on the ESP32-Cam
 
 1. **Flashing the firmware**  
-Connect the esp32cam-board with the USB-TTL connector as shown in the wiring diagram.  
+Connect the ESP32-Cam-board to the USB-TTL connector as shown in the wiring diagram.  
 <img src="./files/ESP32CAM_flash_Steckplatine.svg" width="600">  
-Before flashing the firmware to the esp32cam, we have to bring the module into flash mode. Therefore, pin *IO0* has to be pulled low by connecting the pin with *GND*.
+Before flashing the firmware to the ESP32-Cam, we have to get the module into flash mode. Therefore, pin *IO0* has to be pulled low by connecting the pin with *GND*.
 Then the *RST* button has to be pressed.  
 There are multiple ways of flashing the firmware described in the [installation documentation](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/), we will be using the provided [Web Installer](https://jomjol.github.io/AI-on-the-edge-device/).
-Enter the installer with your esp32cam connected to the computer using the USB-TTL connector **(make sure to use a 3.3V connector for the ESP32!)**. Select the corresponding COM-Port and start the installation of the current firmware version *v15.3.0* (this could take a few minutes).  
+Enter the installer with your ESP32-Cam connected to the computer using the USB-TTL connector **(make sure to use a 3.3V connector for the ESP32!)**. Select the corresponding COM-Port and start the installation of the current firmware version *v15.3.0* (this could take a few minutes).  
 After getting the message of successful installation, you have to disconnect the bridge from *IO0* to *GND*.
 
 2. **Setting up the SD-card**  
-Before booting the esp32cam for the first time, we have to set up the SD-card expected by the firmware. First, format the SD-card in FAT32 format (see [Notes on the SD card](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/#manual-setup-with-an-sd-card-reader-on-a-pc)).  
+Before booting the ESP32-Cam for the first time, we have to set up the SD-card expected by the firmware. First, format the SD-card in FAT32 format (see [Notes on the SD card](https://jomjol.github.io/AI-on-the-edge-device-docs/Installation/#manual-setup-with-an-sd-card-reader-on-a-pc)).  
 Download the current SD-card content form the [release page](https://github.com/jomjol/AI-on-the-edge-device/releases). There you have to download the *AI-on-the-edge-device__manual-setup__vXX.X.X.zip* file and copy the contents of the extracted *sd-card* sub-folder to your microSD-card.
 The content should look like this:  
 <img src="./files/sd-card-content.png" width=150>  
 With editing the included *wlan.ini* file, we can set up the WI-FI connection. Insert the SSID and password into the file. The hostname and other connection parameters can also be changed inside this file.  
-When everything is set up you can insert the SD-card into the esp32cam.
+When everything is set up you can insert the SD-card into the ESP32-Cam.
 
 3. **5V voltage supply**  
 Connect to a 5V supply while unplugging the voltage supply of the USB-TTL connector as shown in the wiring diagram. The remaining connection to the USB-TTL connector is optional and can be used for debugging via a serial monitor.  
 <img src="./files/ESP32CAM_run_Steckplatine.svg" width=750>
 
 4. **Configuration using the Web-UI**  
-Enter the Web-UI using the IP address given to your esp32cam. If everything was successful, you should be welcomed with the configuration page.  
+Enter the Web-UI using the IP address given to your ESP32-Cam. If everything was successful, you should be welcomed with the configuration page.  
 The first step is to take a reference picture. This will be the basis for the coordinate system of the ROIs (Regions of Interest) later on.  
-With this being the first time to see a picture taken by the esp32cam, we can **adjust the focus** of the camera module. Therefore, you have to remove the glue used for fixing the focus ring into place and turn the ring with a pair of pliers in order to set the focal length.  
+With this being the first time to see a picture taken by the ESP32-Cam, we can **adjust the focus** of the camera module. Therefore, you have to remove the glue used for fixing the focus ring into place and turn the ring with a pair of pliers in order to set the focal length.  
 <img src="./files/focus_adjustment.jpg" width=300>  
 With the focus being set, you can proceed with the configuration. After taking the **reference image** and aligning it horizontally, you can define two **alignment references**.
 These will be used to check and adjust the alignment. It is recommended to use unique structures with good contrast.  
-The most important part during configuration is to set up the ROIs. These will later be used for the digit classification. As we are using a 7-segment display, only digit ROIs have to be set up. I was using the display as temperature display, so only ROIs where set up (up to 4 digits would be possible with this display). Here you can also provide information about the order/multiplier to take into account decimal values.   
+The most important part during configuration is to set up the ROIs. These will later be used for the digit classification. As we are using a 7-segment display, only digit ROIs have to be set up. I was using the display as temperature display, so only two ROIs were set up (up to 4 digits would be possible with this display). Here you can also provide information about the order/multiplier to take into account decimal values.   
 <img src="./files/ROI_setup.png" width=600>  
-After everything is set up correctly, you have to reboot the esp32cam.  
+After everything is set up correctly, you have to reboot the ESP32-Cam.  
 For further information on how to configure the AI-on-the-edge-device firmware have a look at the [documentation](https://jomjol.github.io/AI-on-the-edge-device-docs/Reference-Image/).
 
 5. **Selecting the trained neural model**  
 After reboot you might be recognizing (assuming the display is already showing something) that the preconfigured neural network used for the classification of the digits is not working properly with the 7-segment display.  
-Therefore, we will have to change the model by importing the *7seg2312.tflite* model that was already trained on ~2500 digits (see next chapter for instructions) into the file server running on the esp32cam (*System -> File Server -> Upload*).  
+Therefore, we will have to change the model by importing the *7seg2912.tflite* model that was already trained on ~5000 digits (see next chapter for instructions) into the file server running on the ESP32-Cam (*System -> File Server -> Upload*).  
 Now it will be an available option under *Settings -> Configuration -> Digit ROI Processing -> Model*. After the next reboot the digits will be recognized correctly.
 
 
-### Auto-training on the 7-segment display using the Raspberry Pi
+### Training on the 7-segment display using the Raspberry Pi
 
 1. **Training setup**  
 Connect the Raspberry Pi to the TM1637 7-segment display as shown in the following wiring diagram (connect voltage supply and SCL->GPIO5, DIO->GPIO4):  
 <img src="./files/Training_setup.png" width=600>
 <img src="./files/RPi_TM1637_Steckplatine.svg" width=600>  
-Make sure that the segment display is aligned with the esp32cam, if necessary adjust the ROI positions in the WebUI.
+Make sure that the segment display is aligned with the ESP32-Cam, if necessary adjust the ROI positions in the WebUI.
 
 2. **Software setup on the Raspberry Pi**  
 Connect to the Raspberry Pi using SSH, clone the repository and install the required python packages (using Python 3.9.2):
@@ -98,22 +97,23 @@ pip3 install -r requirements.txt
 ```
 
 3. **Run the script for generating training data**  
-Run the script using the following command including the IP address of the esp32cam (as *$ESP32_IP_ADDRESS*) (make sure that both devices are in the same network).
+Run the script using the following command including the IP address of the ESP32-Cam (as *$ESP32_IP_ADDRESS*) (make sure that both devices are in the same network).
 ```shell
 python picture_grabber.py $ESP32_IP_ADDRESS
 ```
 Alternatively you can use:
 ```shell
 nohup python picture_grabber.py $ESP32_IP_ADDRESS
-```
-<img src="./files/Flow.png" width=750>  
+```  
+This will prevent the process from stopping when disconnecting the SSH terminal. 
 
-This will prevent the process from stopping when disconnecting the SSH terminal.  
+<img src="./files/Flow.png" width=750>  
+ 
 What the script does is:  
 - Display a random temperature on the segment display
-- Starting the flow on the esp32cam, meaning: take a picture, align it, extract the ROIs and try to recognize the digits 
+- Starting the flow on the ESP32-Cam, meaning: take a picture, align it, extract the ROIs and try to recognize the digits 
 - When the flow is finished: get the detected value/download the raw aligned image using the built-in REST API 
-- Get the ROI box positions from the *conf.ini* file on the esp32cam file server 
+- Get the ROI box positions from the *conf.ini* file on the ESP32-Cam file server 
 - Cut out the ROIs from the raw aligned image
 - Save the cutouts in the corresponding directory under *digits/...*  
 <img src="./files/0_digit.png"><img src="./files/1_digit.jpeg"><img src="./files/2_digit.jpeg"><img src="./files/3_digit.jpeg"><img src="./files/4_digit.jpeg"><img src="./files/5_digit.jpeg"><img src="./files/6_digit.png"><img src="./files/7_digit.jpeg"><img src="./files/8_digit.jpeg"><img src="./files/9_digit.jpeg">
@@ -135,17 +135,17 @@ jupyter-lab training
 ```
 
 6. **Preparing the data**  
-**Note:** The used notebooks were  provided by this [repository](https://github.com/jomjol/neural-network-digital-counter-readout) but slightly improved  
+**Note:** The notebooks used for training were provided by this [repository](https://github.com/jomjol/neural-network-digital-counter-readout) but slightly changed/improved.  
 For preparation of the data (i.e. resizing to 32x20 pixels) you have to execute the *training/Image_Preparation.ipynb* notebook. This should fill the directory *digits_resized* with the resized images.
 
 7. **Training the model**
 <img src="./files/Model_structure.png" width=750>
 Use the provided *training/Train_CNN_Digital-Readout.ipynb* notebook for training the network. This will take the saved images as training/validation data for the Convolutional Neural Network (CNN). Set the value of *tflite_model_name_version* in order to change the name of the resulting files.   
 At the end of the training the best model weights, saved as checkpoint, are loaded and evaluated. Afterward, the model gets saved in the lightweight tflite format. You can even use a further compressed/quantized version of the model (*...q.tflite*).  
-After the training is done, the model can be uploaded to the esp32cam and used for the ROI digit recognition.
+After the training is done, the model can be uploaded to the ESP32-Cam and used for the ROI digit recognition.
 
 #### Results
-The pictures below show the comparison od size, accuracy and runtime of the model coming with *AI-on-the-edge-device* (baseline), the trained model in keras format, tflite format and a quantized version.
+The pictures below show a comparison of size, accuracy and runtime of the model coming with *AI-on-the-edge-device* (baseline), the trained model in keras format, tflite format and a quantized version.
 
 <img src="./files/Results.jpg" width=600>  
 
@@ -202,7 +202,7 @@ This code can be found in the [repository](https://github.com/SebastianVeigl/AI_
 ## Hints and pitfalls
 
 ### Installation  
-- It might be necessary to supply the esp32cam with 5V during flashing the firmware, if you have problems during installation.
+- It might be necessary to supply the ESP32-Cam with 5V during flashing the firmware, if you have problems during installation.
 - You can check if the flash mode was entered successfully by checking the Logs on the [Web Installer](https://jomjol.github.io/AI-on-the-edge-device/). After pressing the *RST* button on the board, the log should show something like *"waiting for download"*.
 - Status indication by blinking:
   - **fast, endless blinking:** Problem with the SD-card
@@ -217,7 +217,7 @@ This code can be found in the [repository](https://github.com/SebastianVeigl/AI_
 ### Training
 - During training augmentation (changing rotation, zoom, brightness, ...) of the raw pictures is used to prevent overfitting and improve generalization. An example of resulting pictures can be seen in the picture below: 
 <img src="./files/augmentation.png" width=300>  
-- I encountered problems classifying pictures taken at bright environments (e.g. direct sun). Then the pictures contain lines due to the short exposure time and refresh of the display. This leads to unambiguous pictures that are hard to classify. 
+- I encountered problems classifying pictures taken at bright environments (e.g. direct sunlight). Then the pictures contain lines due to the short exposure time and refresh of the display. This leads to unambiguous pictures that are hard to classify.  
 <img src="./files/Display_refresh.gif" width=300>  
 <img src="./files/High_brightness_results.png" width=500>  
 This problem could be fixed with a more encapsulated holder.
