@@ -90,21 +90,21 @@ Make sure that the segment display is aligned with the ESP32-Cam, if necessary a
 
 2. **Software setup on the Raspberry Pi**  
 Connect to the Raspberry Pi using SSH, clone the repository and install the required python packages (using Python 3.9.2):
-```shell
-git clone https://github.com/SebastianVeigl/AI_on_the_edge_segment_train
-cd AI_on_the_edge_segment_train/
-pip3 install -r requirements.txt
-```
+  ```shell
+  git clone https://github.com/SebastianVeigl/AI_on_the_edge_segment_train
+  cd AI_on_the_edge_segment_train/
+  pip3 install -r requirements.txt
+  ```
 
 3. **Run the script for generating training data**  
 Run the script using the following command including the IP address of the ESP32-Cam (as *$ESP32_IP_ADDRESS*) (make sure that both devices are in the same network).
-```shell
-python picture_grabber.py $ESP32_IP_ADDRESS
-```
+  ```shell
+  python picture_grabber.py $ESP32_IP_ADDRESS
+  ```
 Alternatively you can use:
-```shell
-nohup python picture_grabber.py $ESP32_IP_ADDRESS
-```  
+  ```shell
+  nohup python picture_grabber.py $ESP32_IP_ADDRESS
+  ```  
 This will prevent the process from stopping when disconnecting the SSH terminal. 
 
 <img src="./files/Flow.png" width=750>  
@@ -124,15 +124,15 @@ So we have to download the pictures inside the *digits* directory taken by the s
 
 5. **Setting up the training environment**  
 For training you need the python (3.10) packages defined in the *training/requirements.txt* file. For installation first clone the repository, then use:  
-```shell
-git clone https://github.com/SebastianVeigl/AI_on_the_edge_segment_train
-cd AI_on_the_edge_segment_train/
-pip install -r training/requirements.txt
-```
-After installing all necessary packages you can run JupyterLab using the following command:
-```shell
-jupyter-lab training
-```
+  ```shell
+  git clone https://github.com/SebastianVeigl/AI_on_the_edge_segment_train
+  cd AI_on_the_edge_segment_train/
+  pip install -r training/requirements.txt
+  ```
+After installing all necessary packages you can run JupyterLab using the following command:  
+  ```shell
+  jupyter-lab training
+  ```
 
 6. **Preparing the data**  
 **Note:** The notebooks used for training were provided by this [repository](https://github.com/jomjol/neural-network-digital-counter-readout) but slightly changed/improved.  
@@ -156,9 +156,9 @@ Here you can see the confusion matrix of the baseline model (not trained on the 
 ### Inference on other devices (e.g. Raspberry Pi)  
 1. **Installing the Required package**  
 For using the trained tflite model on a Raspberry Pi, you are required to install the *tflite-runtime* package using:   
-```bash
-pip3 install tflite-runtime
-```  
+  ```bash
+  pip3 install tflite-runtime
+  ```  
 2. **Running inference**  
 The code below can be used to classify a picture of a digit cutout using the before trained tflite model on the Raspberry Pi.  
 ```python
@@ -198,6 +198,16 @@ This code can be found in the [repository](https://github.com/SebastianVeigl/AI_
 ## Further Inputs
 - The code used for getting the training data and training th neural net can be found under: <https://github.com/SebastianVeigl/AI_on_the_edge_segment_train>
 - The SD-card content (incl. settings, etc.) used for my implementation can be found in the repository 
+- When installing python packages I recommend using a virtual environment. This will prevent issues with packet dependencies and the already installed packages on the global interpreter. The virtual environment can be created using the following command inside the repository:  
+  ```shell
+  python -m venv venv
+  ```
+  Then activate it using (for Windows):
+  ```shell
+  .\venv\Scripts\activate
+  ```
+  After activation, you should see *(venv)* at the beginning of the terminal line.
+
 
 ## Hints and pitfalls
 
