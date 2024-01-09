@@ -18,6 +18,10 @@ from matplotlib import patches
 
 @dataclass
 class ROI:
+    """
+    Data class to hold the ROI information
+    """
+
     dig_num: int
     x: int
     y: int
@@ -26,7 +30,19 @@ class ROI:
 
 
 class PictureGrabber:
+    """
+    Class for getting training data from the ESP32 camera and saving them using a Raspberry Pi
+    and a 7-segment display (TM1637).
+    """
     def __init__(self, esp_ip, display_clk, display_dio):
+        """
+        Constructor for the PictureGrabber class
+
+        :param esp_ip: Ip address of the ESP32
+        :param display_clk: GPIO pin for the display CLK
+        :param display_dio: GPIO pin for the display DIO
+        """
+
         self.esp_ip = esp_ip
         self.display = tm1637.TM1637(display_clk, display_dio)
 
@@ -37,6 +53,14 @@ class PictureGrabber:
                 os.mkdir(f'digits/{i}')
 
     def start_gathering(self, sleep_time: float, n: Optional[int]):
+        """
+        Start gathering the digit pictures from the ESP32 camera
+
+        :param sleep_time: Time between each gathering
+        :param n: Number of times to gather the digit pictures
+            (infinite if None).
+        """
+
         while not self.check_finished():
             sleep(1)
             print('A flow is already running, waiting for it to finish, before continuing...')
@@ -51,6 +75,12 @@ class PictureGrabber:
             sleep(sleep_time)
 
     def gather_data(self):
+        """
+        Gather the digit pictures once. This will display a random
+        temperature on the display, start the flow on the ESP32 and
+        save the resulting ROI cutouts in the corresponding directory.
+        """
+
         number = random.Random().randint(0, 99)
         self.display.temperature(number)
         print(f'Displaying: {number}')
@@ -77,6 +107,12 @@ class PictureGrabber:
                 image_cutout)
 
     def show_boxes(self, image: np.ndarray):
+        """
+        Show the ROI boxes on top of a given image
+
+        :param image: Image to show the boxes on
+        """
+
         # Create figure and axes
         fig, ax = plt.subplots()
 
@@ -98,6 +134,15 @@ class PictureGrabber:
         plt.show()
 
     def get_config(self) -> List[ROI]:
+        """
+        Get the configuration from the config.ini file on the
+        ESP32. This will gather the information about the ROI
+        location/size.
+
+        :return: List of ROI objects containing the ROI positional
+            information
+        """
+
         req = requests.get(f'http://{self.esp_ip}/fileserver/config/config.ini')
         config_str = str(req.content, req.encoding)
 
@@ -117,6 +162,15 @@ class PictureGrabber:
         return rois
 
     def check_finished(self, status_set: Optional[set] = None) -> bool:
+        """
+        Checks whether the flow on the ESP32 is already finished.
+
+        :param status_set: A set of stati, containing time codes
+            and status names for keeping track of all stati. (optional)
+
+        :return: Boolean indicating whether the flow has finished.
+        """
+
         req = requests.get(f'http://{self.esp_ip}/statusflow')
         resp = str(req.content, req.encoding)
         if status_set is not None:
@@ -124,6 +178,12 @@ class PictureGrabber:
         return 'FINISHED' in resp.upper()
 
     def get_image(self) -> np.ndarray:
+        """
+        Getting the aligned image from the ESP32.
+
+        :return: Array containing the image data
+        """
+
         while not self.check_finished():
             print('Flow already running, waiting for finish')
             sleep(1)
